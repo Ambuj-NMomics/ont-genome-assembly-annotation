@@ -1,0 +1,20 @@
+# Sequencing data
+*.fastq
+*.fastq.gz
+*.fq
+*.bam
+*.sam
+*.paf
+*.pod5
+*.fast5
+
+# Large outputs
+assembly/
+polishing/
+annotation/
+qc/
+
+# Conda / system
+*.log
+*.tmp
+.DS_Store
