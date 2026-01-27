@@ -1,65 +1,62 @@
-<<<<<<< HEAD
-=======
-# ONT-Genome-Assembly-Annotation
-End-to-end Genome Assembly and Annotation Using Oxford Nanopore Long-Read Data                                                  
->>>>>>> 76ac16710a4faf8ebcb056fe52379f534f76d36d
-# Genome Assembly and Annotation using Oxford Nanopore Data
+🧬 ONT Genome Assembly and Annotation
 
-This repository documents a **complete genome assembly and annotation workflow**
-performed using **Oxford Nanopore Technologies (ONT) long-read sequencing data**.
+End-to-end genome assembly and annotation using Oxford Nanopore Technologies (ONT) long-read sequencing data.
 
-The project was carried out as part of my self-learning in bioinformatics,
-with a focus on understanding **real sequencing data, practical limitations,
-and reproducible workflows**.
+This repository documents a reproducible genome assembly workflow developed as part of my independent learning in bioinformatics, with a focus on working with real sequencing data, understanding data limitations, and applying best practices for long-read assembly.
 
----
+📌 Project Overview
 
-## Project Overview
+Sequencing platform: Oxford Nanopore Technologies (ONT)
 
-- Sequencing platform: Oxford Nanopore Technologies (ONT)
-- Data type: Long-read sequencing (barcoded)
-- Organism type: Prokaryotic (bacterial)
-- Workflow type: Assembly → Polishing → QC → Annotation
+Read type: Long reads (barcoded)
 
----
+Target organism: Prokaryotic (bacterial)
 
-## Dataset Summary (after filtering)
+Workflow: Assembly → Polishing → QC → Annotation
 
-| Metric | Value |
-|------|------|
-| Total reads | ~290,000 |
-| Total bases | ~1.68 Gb |
-| Average read length | ~5.8 kb |
-| Maximum read length | ~191 kb |
+The pipeline is designed for bacterial genomes and prioritizes long-read preservation, accurate polishing, and transparent documentation.
 
-Although the raw data contained many short reads, conservative filtering preserved
-a strong long-read tail, enabling high-quality genome assembly.
+📊 Dataset Summary (after filtering)
+Metric	Value
+Total reads	~290,000
+Total bases	~1.68 Gb
+Average read length	~5.8 kb
+Maximum read length	~191 kb
 
----
+Although the raw dataset contained many short reads, conservative filtering preserved a strong long-read tail, enabling high-quality genome assembly.
 
-## Tools Used
+🛠 Tools Used
 
-- SeqKit – read statistics
-- Filtlong – read filtering
-- Flye – genome assembly
-- Minimap2 – read mapping
-- Racon – assembly polishing
-- Medaka – neural-network-based polishing
-- QUAST – assembly quality assessment
-- BUSCO – genome completeness assessment
-- Prokka – genome annotation
+SeqKit – Read statistics and basic QC
 
-All tools were installed using **conda**.
+Filtlong – Length-aware read filtering
 
----
+Flye – Long-read genome assembly
 
-## Workflow Steps
+Minimap2 – Read-to-assembly mapping
 
-### 1. Initial Read Statistics
+Racon – Assembly polishing
 
-```bash
-seqkit stats *.fastq.gz
-<<<<<<< HEAD
+Medaka – Neural network–based polishing
 
-=======
->>>>>>> 76ac16710a4faf8ebcb056fe52379f534f76d36d
+QUAST – Assembly quality assessment
+
+BUSCO – Genome completeness assessment
+
+Prokka – Genome annotation
+
+All tools were installed and managed using Conda.
+
+🔬 Workflow Overview
+
+Initial read statistics and quality assessment
+
+Conservative read filtering to retain long reads
+
+Genome assembly using Flye
+
+Assembly polishing using Racon and Medaka
+
+Assembly quality assessment (QUAST, BUSCO)
+
+Genome annotation using Prokka
