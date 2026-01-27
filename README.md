@@ -1,65 +1,78 @@
-<<<<<<< HEAD
-=======
-# ONT-Genome-Assembly-Annotation
-End-to-end Genome Assembly and Annotation Using Oxford Nanopore Long-Read Data                                                  
->>>>>>> 76ac16710a4faf8ebcb056fe52379f534f76d36d
-# Genome Assembly and Annotation using Oxford Nanopore Data
+# 🧬 ONT Genome Assembly and Annotation
 
-This repository documents a **complete genome assembly and annotation workflow**
-performed using **Oxford Nanopore Technologies (ONT) long-read sequencing data**.
+**End-to-end genome assembly and annotation using Oxford Nanopore Technologies (ONT) long-read sequencing data.**
 
-The project was carried out as part of my self-learning in bioinformatics,
-with a focus on understanding **real sequencing data, practical limitations,
-and reproducible workflows**.
+This repository documents a **reproducible genome assembly workflow** developed as part of my **independent learning in bioinformatics**.  
+The focus is on working with **real ONT sequencing data**, understanding **data limitations**, and applying **best practices for long-read assembly and annotation**.
 
 ---
 
-## Project Overview
+## **📌 Project Overview**
 
-- Sequencing platform: Oxford Nanopore Technologies (ONT)
-- Data type: Long-read sequencing (barcoded)
-- Organism type: Prokaryotic (bacterial)
-- Workflow type: Assembly → Polishing → QC → Annotation
-
----
-
-## Dataset Summary (after filtering)
-
-| Metric | Value |
-|------|------|
-| Total reads | ~290,000 |
-| Total bases | ~1.68 Gb |
-| Average read length | ~5.8 kb |
-| Maximum read length | ~191 kb |
-
-Although the raw data contained many short reads, conservative filtering preserved
-a strong long-read tail, enabling high-quality genome assembly.
+- **Sequencing platform:** Oxford Nanopore Technologies (ONT)  
+- **Read type:** Long reads (barcoded)  
+- **Target organism:** Prokaryotic (bacterial)  
+- **Workflow stages:**
+  - Genome assembly  
+  - Assembly polishing  
+  - Quality control (QC)  
+  - Genome annotation  
 
 ---
 
-## Tools Used
+## **📊 Dataset Summary (After Filtering)**
 
-- SeqKit – read statistics
-- Filtlong – read filtering
-- Flye – genome assembly
-- Minimap2 – read mapping
-- Racon – assembly polishing
-- Medaka – neural-network-based polishing
-- QUAST – assembly quality assessment
-- BUSCO – genome completeness assessment
-- Prokka – genome annotation
+- **Total reads:** ~290,000  
+- **Total bases:** ~1.68 Gb  
+- **Average read length:** ~5.8 kb  
+- **Maximum read length:** ~191 kb  
 
-All tools were installed using **conda**.
+> Although the raw dataset contained many short reads, **conservative filtering preserved a strong long-read tail**, enabling high-quality genome assembly.
 
 ---
 
-## Workflow Steps
+## **🛠 Tools Used**
 
-### 1. Initial Read Statistics
+- **SeqKit** – Read statistics and basic QC  
+- **Filtlong** – Length-aware read filtering  
+- **Flye** – Long-read genome assembly  
+- **Minimap2** – Read-to-assembly mapping  
+- **Racon** – Assembly polishing  
+- **Medaka** – Neural network–based polishing  
+- **QUAST** – Assembly quality assessment  
+- **BUSCO** – Genome completeness assessment  
+- **Prokka** – Genome annotation  
 
-```bash
-seqkit stats *.fastq.gz
-<<<<<<< HEAD
+All tools were installed and managed using **Conda**.
 
-=======
->>>>>>> 76ac16710a4faf8ebcb056fe52379f534f76d36d
+---
+
+## **🔬 Workflow Overview**
+
+The genome assembly and annotation workflow consists of the following steps:
+
+- Initial read statistics and quality assessment  
+- Conservative read filtering to retain long reads  
+- Genome assembly using **Flye**  
+- Assembly polishing using **Racon** and **Medaka**  
+- Assembly quality assessment using **QUAST** and **BUSCO**  
+- Genome annotation using **Prokka**  
+
+📄 **Detailed commands, explanations, and decision points** are provided in:  
+➡️ **[`docs/workflow.md`](docs/workflow.md)**
+
+---
+
+## **📂 Repository Structure**
+
+```text
+ont-genome-assembly-annotation/
+├── README.md                 # Project overview and summary
+├── scripts/
+│   └── assembly_pipeline.sh  # Executable pipeline
+├── docs/
+│   └── workflow.md           # Full step-by-step workflow
+├── qc/
+│   └── read_stats.txt        # Read statistics summary
+└── .gitignore
+
