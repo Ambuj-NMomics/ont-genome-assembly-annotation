@@ -71,14 +71,15 @@ Although the raw dataset contained many short reads, conservative filtering pres
 
 All tools were installed and managed using **Conda**.
 
+
 🛠 Tools Used
 
 SeqKit – Read statistics and basic QC
 
 Filtlong – Length-aware read filtering
->>>>>>> 2b334710d82ce74bc6ce5e56bb61ddb1b55cc738
 
 Flye – Long-read genome assembly
+
 
 
 ## **🔬 Workflow Overview**
