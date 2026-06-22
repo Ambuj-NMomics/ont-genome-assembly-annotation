@@ -6,11 +6,6 @@ This repository documents a **reproducible genome assembly workflow** developed 
 The focus is on working with **real ONT sequencing data**, understanding **data limitations**, and applying **best practices for long-read assembly and annotation**.
 
 
-🧬 ONT Genome Assembly and Annotation
-
-End-to-end genome assembly and annotation using Oxford Nanopore Technologies (ONT) long-read sequencing data.
-
-This repository documents a reproducible genome assembly workflow developed as part of my independent learning in bioinformatics, with a focus on working with real sequencing data, understanding data limitations, and applying best practices for long-read assembly.
 
 
 📌 Project Overview
