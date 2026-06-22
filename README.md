@@ -18,12 +18,6 @@ The focus is on working with **real ONT sequencing data**, understanding **data 
   - Quality control (QC)  
   - Genome annotation  
 
-Sequencing platform: Oxford Nanopore Technologies (ONT)
-
-Read type: Long reads (barcoded)
-
-Target organism: Prokaryotic (bacterial)
-
 
 ## **📊 Dataset Summary (After Filtering)**
 
@@ -34,20 +28,7 @@ Target organism: Prokaryotic (bacterial)
 
 > Although the raw dataset contained many short reads, **conservative filtering preserved a strong long-read tail**, enabling high-quality genome assembly.
 
-Workflow: Assembly → Polishing → QC → Annotation
 
-The pipeline is designed for bacterial genomes and prioritizes long-read preservation, accurate polishing, and transparent documentation.
-
-📊 Dataset Summary (after filtering)
-Metric	Value
-Total reads	~290,000
-Total bases	~1.68 Gb
-Average read length	~5.8 kb
-Maximum read length	~191 kb
-
-
-
-Although the raw dataset contained many short reads, conservative filtering preserved a strong long-read tail, enabling high-quality genome assembly.
 
 ## **🛠 Tools Used**
 
@@ -70,7 +51,7 @@ SeqKit – Read statistics and basic QC
 
 Filtlong – Length-aware read filtering
 
-Flye – Long-read genome assembly
+Flye – Long-read genome assembl
 
 
 
