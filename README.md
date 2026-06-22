@@ -6,7 +6,6 @@ This repository documents a **reproducible genome assembly workflow** developed 
 The focus is on working with **real ONT sequencing data**, understanding **data limitations**, and applying **best practices for long-read assembly and annotation**.
 
 
-📌 Project Overview
 
 ## **📌 Project Overview**
 
